@@ -1,12 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {secondary, white} from '../../config/colors';
 
-export default function AppBadge({color = secondary, title}) {
+export default function AppBadge({color = secondary, title, onPress}) {
   return (
-    <View style={[styles.container, {backgroundColor: color}]}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.container, {backgroundColor: color}]}>
       <Text style={styles.text}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 
