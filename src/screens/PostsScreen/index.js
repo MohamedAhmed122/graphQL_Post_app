@@ -1,18 +1,25 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {StyleSheet, SafeAreaView, View} from 'react-native';
 import Post from '../../components/Post';
+import AppModalize from '../../components/Modalize';
 import AppButton from '../../common/AppButton';
 import {secondary, white} from '../../config/colors';
 export default function PostsScreen() {
+  const modalizeRef = useRef(null);
+
+  const onOpen = () => {
+    modalizeRef.current?.open();
+  };
   return (
     <View style={styles.screen}>
       <SafeAreaView />
       <View style={styles.container}>
-        <AppButton title="Create Post" color={secondary} />
+        <AppButton title="Create Post" color={secondary} onPress={onOpen} />
       </View>
       <Post />
       <Post />
       <Post />
+      <AppModalize modalizeRef={modalizeRef} />
     </View>
   );
 }

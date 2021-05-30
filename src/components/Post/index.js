@@ -8,6 +8,7 @@ import {lightGray, primary, secondary} from '../../config/colors';
 export default function Post() {
   const [isLiked, setIsLiked] = useState(false);
   const navigation = useNavigation();
+
   const img =
     'https://media.istockphoto.com/photos/portrait-of-smiling-handsome-man-in-blue-tshirt-standing-with-crossed-picture-id1045886560?k=6&m=1045886560&s=612x612&w=0&h=hXrxai1QKrfdqWdORI4TZ-M0ceCVakt4o6532vHaS3I=';
   return (
