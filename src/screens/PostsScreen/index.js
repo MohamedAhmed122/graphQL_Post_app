@@ -1,9 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, SafeAreaView, View} from 'react-native';
 
 export default function PostsScreen() {
   return (
     <View>
+      <SafeAreaView />
       <Text> PostsScreen</Text>
     </View>
   );
