@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import PostsScreen from '../screens/PostsScreen';
-import PostScreen from '../screens/LoginScreen';
+import PostScreen from '../screens/PostScreen';
 import {primary} from '../config/colors';
 
 const Stack = createStackNavigator();
